@@ -46,3 +46,7 @@ now in exercise3 handler, extract your autologin link from a POST request to loc
 Then, using http library, make a get request to ("{autologin link}/module/board/?format=json&start=2022-05-09&end=2022-05-16")
 
 and print the result
+
+# Ending
+
+You now have the json format for the current week of all activities at epitech, from here you can use this to automate your own bot which uploads tasks to various calendars like notion or google to further automate your worklife!
