@@ -15,10 +15,6 @@ func hello(w http.ResponseWriter, r *http.Request) {
 func wdym(w http.ResponseWriter, r *http.Request) {
 	// exercise 1 here
 
-	//
-	if r.Method == "POST" {
-		// exercise 2
-	}
 }
 
 func main() {
