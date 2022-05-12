@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"net/url"
 )
 
 func hello(w http.ResponseWriter, r *http.Request) {
@@ -13,10 +14,8 @@ func hello(w http.ResponseWriter, r *http.Request) {
 }
 
 func wdym(w http.ResponseWriter, r *http.Request) {
-	if r.Method == "GET" {
-		fmt.Fprintf(w, "I get it")
-	}
-
+	m, _ := url.ParseQuery(r.URL.RawQuery)
+	fmt.Fprintf(w, "Hello %s!", m["name"][0])
 }
 
 func main() {
