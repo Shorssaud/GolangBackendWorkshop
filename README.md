@@ -33,20 +33,12 @@ and print "Hello Steven Universe born August 14th"
 
 # Exercise 3
 
-Here you will use the intra to extract the epitech calendar information
+Here you will use the weather api to get the weather
 
-get your autologin link: 
-https://intra.epitech.eu/admin/autolog
-
-now in exercise3 handler, extract your autologin link from a POST request to localhost:8000/calendar
-{
-	"key": "{Your Key}" 
-}
-
-Then, using http library, make a get request to ("{autologin link}/module/board/?format=json&start=2022-05-09&end=2022-05-16")
+Then, using http library, make a get request to ("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m")
 
 and print the result
 
 # Ending
 
-You now have the json format for the current week of all activities at epitech, from here you can use this to automate your own bot which uploads tasks to various calendars like notion or google to further automate your worklife!
+You now have the ability to get information from any api using golang. Try using it for other apps like steam, twitter, or even yugioh! (ALL of this can and will be useful for those who haven't done the area yet.
