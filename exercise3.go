@@ -7,30 +7,24 @@ import (
 )
 
 type Info struct {
-	Title_module string `json:"title_module"`
-	Begin_event  string `json:"begin_event"`
-	End_event    string `json:"end_event"`
-	Seats        string `json:"seats"`
-	Type_acti    string `json:"type_acti"`
-	acti_title   string `json:"acti_title"`
-	Begin_acti   string `json:"begin_acti"`
-	End_acti     string `json:"end_acti"`
-	Registered   int    `json:"registered"`
+	Current_weather Weather `json:"current_weather"`
 }
 
-type Request struct {
-	PersonalKey string `json:"personalKey"`
+type Weather struct {
+	Temperature   float32 `json:"temperature"`
+	Windspeed     float32 `json:"windspeed"`
+	Winddirection float32 `json:"winddirection"`
+	Weathercode   int     `json:"weathercode"`
+	Time          string  `json:"time"`
 }
 
 func exercise3(w http.ResponseWriter, r *http.Request) {
-	// use this to extract your key from the request
-	var req Request
-	// use this to extract the calendar info from the intranet
-	var body []Info
+	// call to the https://open-meteo.com api and print out the info using the structures above
+	return
 }
 
 func main() {
-	http.HandleFunc("/calendar", exercise3)
+	http.HandleFunc("/weather", exercise3)
 
 	fmt.Printf("Starting server for testing HTTP POST...\n")
 	if err := http.ListenAndServe(":8000", nil); err != nil {
